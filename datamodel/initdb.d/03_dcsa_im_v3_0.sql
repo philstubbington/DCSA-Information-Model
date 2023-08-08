@@ -683,8 +683,8 @@ CREATE TABLE dcsa_im_v3_0.transport_call (
     location_id uuid NULL REFERENCES dcsa_im_v3_0.location (id),
     mode_of_transport_code varchar(3) NULL REFERENCES dcsa_im_v3_0.mode_of_transport (mode_of_transport_code),
     vessel_id uuid NULL REFERENCES dcsa_im_v3_0.vessel(id),
-    import_voyage_id uuid NULL, -- references on line 800
-    export_voyage_id uuid NULL, -- references on line 800
+    import_voyage_id uuid NULL, -- see references below to ADD FOREIGN KEY (import_voyage_id)
+    export_voyage_id uuid NULL, -- see references below to ADD FOREIGN KEY (export_voyage_id)
     port_call_status_type_code char(4) NULL REFERENCES dcsa_im_v3_0.port_call_status_type (port_call_status_type_code),
     port_visit_reference varchar(50) NULL
 );
